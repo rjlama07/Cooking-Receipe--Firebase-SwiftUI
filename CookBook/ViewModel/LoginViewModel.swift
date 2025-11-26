@@ -7,12 +7,13 @@
 
 import Foundation
 
-@MainActor
-class LoginViewModel: ObservableObject {
-    @Published var showRegistrationView: Bool = false
-    @Published var email:String = "";
-    @Published var password:String = "";
-    @Published var showPassword = false;
+
+@Observable
+class LoginViewModel {
+    var showRegistrationView: Bool = false
+    var email:String = "";
+    var password:String = "";
+    var showPassword = false;
     
     
     func toggleRegistrationView() {

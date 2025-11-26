@@ -6,29 +6,42 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var showLogoutAlert: Bool = false
+   @State private var viewModel = HomeViewModel()
     @EnvironmentObject var authManager: AuthManager
     var body: some View {
         NavigationStack {
             VStack{
+                Spacer()
+                Button {
+                    viewModel.showAddReceipe.toggle()
+                } label: {
+                    Text("Add Receipe")
+                }
+                .buttonStyle(PrimaryButtonStyle())
+
                 
-            }.toolbar {
+            }
+            .padding(.horizontal,16)
+            .toolbar {
                 ToolbarItem {
                     Button {
-                        showLogoutAlert.toggle()
+                        viewModel.showLogoutAlert.toggle()
                     } label: {
                         Image(systemName: "gear")
                     }.foregroundStyle(.red)
 
                 }
             }
-            .alert("Are you sure", isPresented: $showLogoutAlert) {
+            .alert("Are you sure", isPresented: $viewModel.showLogoutAlert) {
                 Button("Logout", role: .destructive) {
                     authManager.logoutUser()
                 }
                 Button("Cancel", role: .cancel) {
                
                 }
+            }
+            .sheet(isPresented: $viewModel.showAddReceipe) {
+                AddReceipeView()
             }
         }
     }

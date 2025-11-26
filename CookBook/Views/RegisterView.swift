@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @StateObject var registerViewModel: RegisterViewModel = RegisterViewModel();
+    @State var registerViewModel: RegisterViewModel = RegisterViewModel();
     @Environment(\.dismiss) var dismiss;
 
     var body: some View {

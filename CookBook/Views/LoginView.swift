@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
   
-    @StateObject var loginViewModel:LoginViewModel = LoginViewModel()
+    @State var loginViewModel:LoginViewModel = LoginViewModel()
     @EnvironmentObject var authManager: AuthManager
     var body: some View {
         VStack(alignment: .leading, content: {
@@ -24,13 +24,7 @@ struct LoginView: View {
                 authManager.authenticateUser()
             } label: {
                 Text("Login")
-                    .font(.system(size: 15, weight: .bold))
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity,maxHeight: 44)
-                    .background(.green)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                
-            }
+            }.buttonStyle(PrimaryButtonStyle())
             
             HStack{
                 Spacer()

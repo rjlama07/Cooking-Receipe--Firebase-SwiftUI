@@ -6,8 +6,9 @@
 //
 
 import Foundation
-@MainActor
-class HomeViewModel: ObservableObject {
-   @Published var showLogoutAlert: Bool = false
-    @Published var showAddReceipe: Bool = false
+@Observable
+class HomeViewModel {
+   var showLogoutAlert: Bool = false
+    var showAddReceipe: Bool = false
 }
+

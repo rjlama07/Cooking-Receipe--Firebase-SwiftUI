@@ -9,8 +9,6 @@
 
 import Foundation
 
-
-@MainActor
 @Observable
 class AddReceipeViewModel {
     var receipeName: String = ""
