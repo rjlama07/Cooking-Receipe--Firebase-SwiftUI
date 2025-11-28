@@ -21,7 +21,7 @@ struct LoginView: View {
                 .font(.system(size: 15))
             PasswordTextField(password: $loginViewModel.password, showPassword: $loginViewModel.showPassword)
             Button {
-                authManager.authenticateUser()
+//                authManager.authenticateUser()
             } label: {
                 Text("Login")
             }.buttonStyle(PrimaryButtonStyle())

@@ -10,42 +10,62 @@ import SwiftUI
 struct RegisterView: View {
     @State var registerViewModel: RegisterViewModel = RegisterViewModel();
     @Environment(\.dismiss) var dismiss;
+    @EnvironmentObject var authManager: AuthManager
 
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Username")
-                .font(.system(size: 15))
-            TextField("Username", text: $registerViewModel.username)
-                .textFieldStyle(AuthTextFieldStyle())
-            Text("Email")
-                .font(.system(size: 15))
-            TextField("Email", text: $registerViewModel.email)
-                .textFieldStyle(AuthTextFieldStyle())
-            Text("Password")
-                .font(.system(size: 15))
-            PasswordTextField(password: $registerViewModel.password, showPassword: $registerViewModel.showPassword)
-            Button {
-                
-            } label: {
-                Text("Create Account")
-                    .font(.system(size: 15, weight: .bold))
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity,maxHeight: 44)
-                    .background(.green)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                
-            }
-            
-            HStack{
-                Spacer()
-                Text("Already have an account?")
-                Button("Login"){
-                    dismiss()
+        ZStack {
+           
+            VStack(alignment: .leading){
+                Text("Username")
+                    .font(.system(size: 15))
+                TextField("Username", text: $registerViewModel.username)
+                    .textFieldStyle(AuthTextFieldStyle())
+                Text("Email")
+                    .font(.system(size: 15))
+                TextField("Email", text: $registerViewModel.email)
+                    .textFieldStyle(AuthTextFieldStyle())
+                Text("Password")
+                    .font(.system(size: 15))
+                PasswordTextField(password: $registerViewModel.password, showPassword: $registerViewModel.showPassword)
+                Button {
+                    Task{
+                      let user =  await registerViewModel.signIn()
+                        if let user = user
+                        {
+                            authManager.authenticateUser(user: user)
+                        }
+                    }
+                } label: {
+                    Text("Create Account")
+                        .font(.system(size: 15, weight: .bold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity,maxHeight: 44)
+                        .background(.green)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    
                 }
-                Spacer()
-            }.padding(.top,16)
+                
+                HStack{
+                    Spacer()
+                    Text("Already have an account?")
+                    Button("Login"){
+                        dismiss()
+                    }
+                    Spacer()
+                }.padding(.top,16)
+            }
+            .padding(.horizontal,16)
+            
+            if(registerViewModel.isLoading)
+            {
+                LoadingComponentView()
+            }
+        }.alert("Error", isPresented: $registerViewModel.showErrorMessage) {
+            
+        } message: {
+            Text(registerViewModel.errorMessage ?? "")
         }
-        .padding(.horizontal,16)
+
     }
 }
 

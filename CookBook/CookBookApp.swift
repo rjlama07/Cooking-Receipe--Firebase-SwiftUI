@@ -29,6 +29,10 @@ struct CookBookApp: App {
                 LoginView().environmentObject(authManager)
                 case .authenticated:
                 HomeView().environmentObject(authManager)
+            case .loading:
+                VStack{
+                    ProgressView()
+                }
             }
         }
     }

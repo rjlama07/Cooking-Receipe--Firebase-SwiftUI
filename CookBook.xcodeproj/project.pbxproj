@@ -26,6 +26,9 @@
 		30530EA22ED9335B0005DA2B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 30530EA12ED9335B0005DA2B /* FirebaseAuth */; };
 		30530EA42ED9335B0005DA2B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 30530EA32ED9335B0005DA2B /* FirebaseFirestore */; };
 		30530EA62ED9335B0005DA2B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 30530EA52ED9335B0005DA2B /* FirebaseStorage */; };
+		30530EA82ED9386F0005DA2B /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30530EA72ED9386E0005DA2B /* Untitled.swift */; };
+		30530EAA2ED9387C0005DA2B /* LoadingComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30530EA92ED9387C0005DA2B /* LoadingComponentView.swift */; };
+		30530EAC2ED940C30005DA2B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30530EAB2ED940C20005DA2B /* User.swift */; };
 		309ABA832ED0B01300A67A40 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309ABA822ED0B01300A67A40 /* LoginView.swift */; };
 		309ABA862ED0B34A00A67A40 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309ABA852ED0B34600A67A40 /* LoginViewModel.swift */; };
 		309ABA8A2ED0B42400A67A40 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309ABA892ED0B42400A67A40 /* RegisterView.swift */; };
@@ -49,6 +52,9 @@
 		303EE0942ED6A77000AF7017 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		303EE0962ED6A87E00AF7017 /* AddReceipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceipeViewModel.swift; sourceTree = "<group>"; };
 		30530E9E2ED931620005DA2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30530EA72ED9386E0005DA2B /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
+		30530EA92ED9387C0005DA2B /* LoadingComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingComponentView.swift; sourceTree = "<group>"; };
+		30530EAB2ED940C20005DA2B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		309ABA822ED0B01300A67A40 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		309ABA852ED0B34600A67A40 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		309ABA892ED0B42400A67A40 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 		20FA156F2B9B333500C835F0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				30530EAB2ED940C20005DA2B /* User.swift */,
 				20FA15DE2B9BC4C100C835F0 /* Receipe.swift */,
 			);
 			path = Models;
@@ -139,10 +146,12 @@
 		303EE0842ED0B62000AF7017 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				30530EA72ED9386E0005DA2B /* Untitled.swift */,
 				303EE0922ED6A66400AF7017 /* PrimaryButtonStyle.swift */,
 				303EE0902ED6A29300AF7017 /* CapsuleTextFieldStyle.swift */,
 				303EE0872ED0B8CC00AF7017 /* PasswordTextField.swift */,
 				303EE0852ED0B62700AF7017 /* AuthTextField.swift */,
+				30530EA92ED9387C0005DA2B /* LoadingComponentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -248,9 +257,11 @@
 			files = (
 				303EE08A2ED0BB3500AF7017 /* RegisterViewModel.swift in Sources */,
 				20FA15DF2B9BC4C100C835F0 /* Receipe.swift in Sources */,
+				30530EA82ED9386F0005DA2B /* Untitled.swift in Sources */,
 				20FA15DB2B9BC32B00C835F0 /* HomeView.swift in Sources */,
 				303EE0862ED0B62B00AF7017 /* AuthTextField.swift in Sources */,
 				309ABA832ED0B01300A67A40 /* LoginView.swift in Sources */,
+				30530EAA2ED9387C0005DA2B /* LoadingComponentView.swift in Sources */,
 				303EE08F2ED6A0EC00AF7017 /* AddReceipeView.swift in Sources */,
 				309ABA8A2ED0B42400A67A40 /* RegisterView.swift in Sources */,
 				303EE0932ED6A66900AF7017 /* PrimaryButtonStyle.swift in Sources */,
@@ -258,6 +269,7 @@
 				303EE0952ED6A77400AF7017 /* HomeViewModel.swift in Sources */,
 				303EE0882ED0B8D100AF7017 /* PasswordTextField.swift in Sources */,
 				303EE0912ED6A29800AF7017 /* CapsuleTextFieldStyle.swift in Sources */,
+				30530EAC2ED940C30005DA2B /* User.swift in Sources */,
 				303EE0972ED6A88300AF7017 /* AddReceipeViewModel.swift in Sources */,
 				20FA154B2B9A788F00C835F0 /* CookBookApp.swift in Sources */,
 				303EE08D2ED699F600AF7017 /* AuthManager.swift in Sources */,

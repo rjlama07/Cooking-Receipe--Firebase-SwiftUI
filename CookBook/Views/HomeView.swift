@@ -11,6 +11,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack{
+                Text( "Welcome " + (authManager.user?.username ?? "Unknown"))
                 Spacer()
                 Button {
                     viewModel.showAddReceipe.toggle()
