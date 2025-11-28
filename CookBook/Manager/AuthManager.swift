@@ -54,7 +54,7 @@ class AuthManager: ObservableObject {
     
     func initFirebaseUser(id: String) async throws{
      
-        let user = try?  await Firestore.firestore().collection("users").document(id).getDocument(as: AppUser.self)
+        let user = await Userservices.getUser(id: id)
         self.user = user
         
         

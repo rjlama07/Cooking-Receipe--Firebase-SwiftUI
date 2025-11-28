@@ -29,6 +29,7 @@
 		30530EA82ED9386F0005DA2B /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30530EA72ED9386E0005DA2B /* Untitled.swift */; };
 		30530EAA2ED9387C0005DA2B /* LoadingComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30530EA92ED9387C0005DA2B /* LoadingComponentView.swift */; };
 		30530EAC2ED940C30005DA2B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30530EAB2ED940C20005DA2B /* User.swift */; };
+		30530EAF2ED9492C0005DA2B /* Userservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30530EAE2ED949220005DA2B /* Userservices.swift */; };
 		309ABA832ED0B01300A67A40 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309ABA822ED0B01300A67A40 /* LoginView.swift */; };
 		309ABA862ED0B34A00A67A40 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309ABA852ED0B34600A67A40 /* LoginViewModel.swift */; };
 		309ABA8A2ED0B42400A67A40 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309ABA892ED0B42400A67A40 /* RegisterView.swift */; };
@@ -55,6 +56,7 @@
 		30530EA72ED9386E0005DA2B /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
 		30530EA92ED9387C0005DA2B /* LoadingComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingComponentView.swift; sourceTree = "<group>"; };
 		30530EAB2ED940C20005DA2B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		30530EAE2ED949220005DA2B /* Userservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userservices.swift; sourceTree = "<group>"; };
 		309ABA822ED0B01300A67A40 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		309ABA852ED0B34600A67A40 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		309ABA892ED0B42400A67A40 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		20FA15492B9A788F00C835F0 /* CookBook */ = {
 			isa = PBXGroup;
 			children = (
+				30530EAD2ED9491B0005DA2B /* Services */,
 				30530E9E2ED931620005DA2B /* GoogleService-Info.plist */,
 				303EE08B2ED699E800AF7017 /* Manager */,
 				303EE0842ED0B62000AF7017 /* Components */,
@@ -162,6 +165,14 @@
 				303EE08C2ED699EE00AF7017 /* AuthManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		30530EAD2ED9491B0005DA2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				30530EAE2ED949220005DA2B /* Userservices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		309ABA842ED0B33B00A67A40 /* ViewModel */ = {
@@ -266,6 +277,7 @@
 				309ABA8A2ED0B42400A67A40 /* RegisterView.swift in Sources */,
 				303EE0932ED6A66900AF7017 /* PrimaryButtonStyle.swift in Sources */,
 				309ABA862ED0B34A00A67A40 /* LoginViewModel.swift in Sources */,
+				30530EAF2ED9492C0005DA2B /* Userservices.swift in Sources */,
 				303EE0952ED6A77400AF7017 /* HomeViewModel.swift in Sources */,
 				303EE0882ED0B8D100AF7017 /* PasswordTextField.swift in Sources */,
 				303EE0912ED6A29800AF7017 /* CapsuleTextFieldStyle.swift in Sources */,
@@ -406,7 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CookBook/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LC4Q89L94W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -435,7 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CookBook/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LC4Q89L94W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
