@@ -15,6 +15,8 @@ struct AddReceipeView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 18).fill(Color.primaryFormEntry).frame(height: 200)
                 Image(systemName: "photo.fill")
+            }.onTapGesture {
+                viewModel.showImagePickerDialog = true
             }
             Text("Receipe Name")
                 .font(.system(size: 15, weight: .semibold))
@@ -49,7 +51,21 @@ struct AddReceipeView: View {
             
             Spacer()
             
-        }.padding(.horizontal,16)
+        }
+        .padding(.horizontal,16)
+        .confirmationDialog("Upload Image", isPresented: $viewModel.showImagePickerDialog) {
+            Button {
+                
+            } label: {
+                Text("Upload from Camera")
+            }
+            Button {
+                
+            } label: {
+                Text("Upload from Photo Library")
+            }
+
+        }
     }
 }
 

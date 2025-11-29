@@ -14,4 +14,5 @@ class AddReceipeViewModel {
     var receipeName: String = ""
     var preparationTime: Int = 0
     var cookingInstruction : String = ""
+    var showImagePickerDialog: Bool = false
 }
